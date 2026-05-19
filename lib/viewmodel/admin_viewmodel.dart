@@ -1,7 +1,7 @@
 /* 
 Student Numbers: 223046876, 223000460, 223050336, 223040081, 224000274, 224027806
 Student Names: Lehlogonolo Moshoeu, Asanda Sithole, Sandile Pheko, Mvelo Masinga, Mponisi Nkuna, Cedric Motone
-updated files:  admin_viewmodel.dart
+updated files:  admin_viewmodel.dart.
 */ 
 
 import 'package:flutter/foundation.dart';
@@ -13,8 +13,8 @@ class AdminViewModel extends ChangeNotifier {
   List<ApplicationModel> _filteredApplications = [];
   bool _isLoading = false;
   String? _errorMessage;
-  String _currentFilter = 'all';
   String _searchQuery = '';
+   String _currentFilter = 'all';
 
   List<ApplicationModel> get allApplications => _allApplications;
   List<ApplicationModel> get filteredApplications => _filteredApplications;
