@@ -56,7 +56,7 @@ class _ApplicationFormScreenState extends State<ApplicationFormScreen> {
   final Map<String, Map<String, List<Map<String, dynamic>>>> _allSubjects = {
     'First Year': {
       'Semester 1': [
-        {'name': 'SOFTWARE DEVELOPMENT I', 'code': 'SOD115C', 'credits': 15.00},
+        {'Coursename': 'SOFTWARE DEVELOPMENT I', 'code': 'SOD115C', 'credits': 15.00},
         {'name': 'INFORMATION TECHNOLOGY MATHEMATICS I', 'code': 'ITM115C', 'credits': 15.00},
         {'name': 'INFORMATION TECHNOLOGY ESSENTIALS I', 'code': 'ITE115C', 'credits': 15.00},
         {'name': 'PROBLEM SOLVING AND ALGORITHMS', 'code': 'PSA115C', 'credits': 15.00},
