@@ -13,7 +13,7 @@ class AdminModel {
   });
 
   /// Returns a new [AdminModel] with any supplied fields overridden
-  /// Unmodified fields fall back to the current instance's values
+  /// Unmodified fields fall back to the current instance values
   AdminModel copyWith({
     String? id,
     String? email,
