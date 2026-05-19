@@ -27,7 +27,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   XFile? _selectedImage;
   String? _profileImageUrl;
   String? _studentNumber;
-  Uint8List? _imageBytes;  // ✅ Cache image bytes
+  Uint8List? _imageBytes;  // Cache image bytes
   bool _isSaving = false;
   bool _isLoadingImage = false;
   String? _uploadError;
@@ -67,7 +67,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       
       final image = await StorageService.pickImage(source);
       if (image != null && mounted) {
-        // ✅ Load bytes once and cache them
+        //  Load bytes once and cache them
         final bytes = await image.readAsBytes();
         setState(() {
           _selectedImage = image;
@@ -140,7 +140,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       setState(() => _isSaving = false);
       
       if (success) {
-        // ✅ Clear selected image after successful save
+        // Clear selected image after successful save
         _selectedImage = null;
         _imageBytes = null;
         
