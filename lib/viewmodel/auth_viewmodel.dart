@@ -36,7 +36,6 @@ class AuthViewModel extends ChangeNotifier {
   int get currentYearOfStudy => _currentStudent?.yearOfStudy ?? 1;
   String get currentDepartment => _currentStudent?.department ?? '';
 
-  // Generate student number: YYYYMM + SEQUENCE
   Future<String> _generateStudentNumber() async {
     final now = DateTime.now();
     final yearMonth = '${now.year}${now.month.toString().padLeft(2, '0')}';
