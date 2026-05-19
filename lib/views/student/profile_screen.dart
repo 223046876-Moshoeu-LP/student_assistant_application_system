@@ -1,6 +1,7 @@
 /* 
 Student Numbers: 223046876, 223000460, 223050336, 223040081, 224000274, 224027806
 Student Names: Lehlogonolo Moshoeu, Asanda Sithole, Sandile Pheko, Mvelo Masinga, Mponisi Nkuna, Cedric Motone
+Questions:The student views allows authenticated students to submit, view, edit, delete, and track the status of their SI application.
 */ 
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
@@ -26,7 +27,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   XFile? _selectedImage;
   String? _profileImageUrl;
   String? _studentNumber;
-  Uint8List? _imageBytes;  // ✅ Cache image bytes
+  Uint8List? _imageBytes;  // Cache image bytes
   bool _isSaving = false;
   bool _isLoadingImage = false;
   String? _uploadError;
@@ -66,7 +67,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       
       final image = await StorageService.pickImage(source);
       if (image != null && mounted) {
-        // ✅ Load bytes once and cache them
+        //  Load bytes once and cache them
         final bytes = await image.readAsBytes();
         setState(() {
           _selectedImage = image;
@@ -139,7 +140,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       setState(() => _isSaving = false);
       
       if (success) {
-        // ✅ Clear selected image after successful save
+        // Clear selected image after successful save
         _selectedImage = null;
         _imageBytes = null;
         
