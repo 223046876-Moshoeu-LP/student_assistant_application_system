@@ -4,7 +4,11 @@ A Flutter application for managing Student Assistant applications.
 
 ## Group Members
 - Lehlogonolo Moshoeu (223046876)
-- [Add other group members]
+- Asanda Sithole (223000460)
+- Sandile Pheko( 223050336)
+- Mvelo Masinga (223040081)
+- Mponisi Nkuna (224000274)
+- Cedric Motone (224027806)
 
 ## Features
 - Student authentication
