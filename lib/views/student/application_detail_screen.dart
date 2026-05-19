@@ -1,8 +1,4 @@
-/* 
-Student Numbers: 223046876, 223000460, 223050336, 223040081, 224000274, 224027806
-Student Names: Lehlogonolo Moshoeu, Asanda Sithole, Sandile Pheko, Mvelo Masinga, Mponisi Nkuna, Cedric Motone
-Questions:The student views allows authenticated students to submit, view, edit, delete, and track the status of their SI application.
-*/ 
+// lib/views/student/application_detail_screen.dart
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -14,7 +10,8 @@ class ApplicationDetailScreen extends StatefulWidget {
   const ApplicationDetailScreen({super.key, required this.applicationId});
 
   @override
-  State<ApplicationDetailScreen> createState() => _ApplicationDetailScreenState();
+  State<ApplicationDetailScreen> createState() =>
+      _ApplicationDetailScreenState();
 }
 
 class _ApplicationDetailScreenState extends State<ApplicationDetailScreen> {
@@ -29,22 +26,26 @@ class _ApplicationDetailScreenState extends State<ApplicationDetailScreen> {
 
   void _loadApplication() {
     final appVM = context.read<ApplicationViewModel>();
-    _application = appVM.applications.firstWhere((a) => a.id == widget.applicationId);
+    _application =
+        appVM.applications.firstWhere((a) => a.id == widget.applicationId);
     setState(() => _isLoading = false);
   }
 
   Color _getStatusColor() {
     switch (_application.status) {
-      case 'approved': return Colors.green;
-      case 'rejected': return Colors.red;
-      default: return Colors.orange;
+      case 'approved':
+        return Colors.green;
+      case 'rejected':
+        return Colors.red;
+      default:
+        return Colors.orange;
     }
   }
 
   @override
   Widget build(BuildContext context) {
     if (_isLoading) {
-      return  Scaffold(
+      return Scaffold(
         appBar: AppBar(title: Text('Application Details')),
         body: Center(child: CircularProgressIndicator()),
       );
@@ -63,33 +64,33 @@ class _ApplicationDetailScreenState extends State<ApplicationDetailScreen> {
           children: [
             Center(
               child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 decoration: BoxDecoration(
                   color: _getStatusColor().withOpacity(0.1),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Text(
                   _application.status.toUpperCase(),
-                  style: TextStyle(color: _getStatusColor(), fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      color: _getStatusColor(), fontWeight: FontWeight.bold),
                 ),
               ),
             ),
             const SizedBox(height: 24),
-            
             _buildInfoCard('Student Information', [
               _buildInfoRow('Student Number', _application.studentNumber),
               _buildInfoRow('Full Name', _application.fullName),
               _buildInfoRow('Email', _application.email),
-              _buildInfoRow('Year of Study', _application.yearOfStudy.toString()),
+              _buildInfoRow(
+                  'Year of Study', _application.yearOfStudy.toString()),
             ]),
             const SizedBox(height: 16),
-            
             _buildInfoCard('First Module', [
               _buildInfoRow('Level', _application.firstModuleLevel),
               _buildInfoRow('Module', _application.firstModuleName),
               _buildInfoRow('Reason', _application.firstModuleReason),
             ]),
-            
             if (_application.hasSecondModule) ...[
               const SizedBox(height: 16),
               _buildInfoCard('Second Module', [
@@ -98,20 +99,18 @@ class _ApplicationDetailScreenState extends State<ApplicationDetailScreen> {
                 _buildInfoRow('Reason', _application.secondModuleReason ?? ''),
               ]),
             ],
-            
             const SizedBox(height: 16),
             _buildInfoCard('Documents', [
               _buildInfoRow('CV', _application.cvUrl ?? 'Not uploaded'),
-              _buildInfoRow('Academic Record', _application.academicRecordUrl ?? 'Not uploaded'),
+              _buildInfoRow('Academic Record',
+                  _application.academicRecordUrl ?? 'Not uploaded'),
             ]),
-            
             if (_application.rejectionReason != null) ...[
               const SizedBox(height: 16),
               _buildInfoCard('Rejection Reason', [
                 Text(_application.rejectionReason!),
               ]),
             ],
-            
             const SizedBox(height: 32),
             Center(
               child: TextButton.icon(
@@ -133,7 +132,9 @@ class _ApplicationDetailScreenState extends State<ApplicationDetailScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(title, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            Text(title,
+                style:
+                    const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             const Divider(),
             ...children,
           ],
@@ -148,7 +149,10 @@ class _ApplicationDetailScreenState extends State<ApplicationDetailScreen> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(width: 120, child: Text('$label:', style: const TextStyle(fontWeight: FontWeight.w500))),
+          SizedBox(
+              width: 120,
+              child: Text('$label:',
+                  style: const TextStyle(fontWeight: FontWeight.w500))),
           Expanded(child: Text(value)),
         ],
       ),

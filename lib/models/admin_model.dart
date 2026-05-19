@@ -14,7 +14,7 @@ class AdminModel {
     required this.fullName,
   });
 
-  /// Returns a new [AdminModel] with any supplied fields overridden
+  // Returns a new [AdminModel] with any supplied fields overridden
   // Unmodified fields fall back to the current instance values
   AdminModel copyWith({
     String? id,
