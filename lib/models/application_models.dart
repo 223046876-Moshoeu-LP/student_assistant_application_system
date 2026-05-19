@@ -123,6 +123,7 @@ class ApplicationModel {
     };
   }
 
+// Creates a new [ApplicationModel]
   ApplicationModel copyWith({
     String? id,
     String? userId,

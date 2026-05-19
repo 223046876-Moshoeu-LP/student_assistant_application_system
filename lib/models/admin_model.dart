@@ -3,6 +3,7 @@ Student Numbers: 223046876, 223000460, 223050336, 223040081, 224000274, 22402780
 Student Names: Lehlogonolo Moshoeu, Asanda Sithole, Sandile Pheko, Mvelo Masinga, Mponisi Nkuna, Cedric Motone
 Questions: Main entry point of the application 
 */
+
 class AdminModel {
   final String id; // Supabase auth user UUID
   final String email; //Admin email address used for login and display
