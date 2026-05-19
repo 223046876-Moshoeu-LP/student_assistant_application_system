@@ -2,17 +2,18 @@
 // Immutable data model representing an administrator account.
 
 class AdminModel {
-  final String id; // Supabase auth user UUID(MA-NKUNA)
-  final String email; //Admin's email address. (MA-NKUNA)
-  final String fullName; // Display name shown in the dashboard.(MA-NKUNA)
+  final String id; // Supabase auth user UUID
+  final String email; //Admin email address used for login and display
+  final String fullName; // Display name shown in the dashboard
 
   AdminModel({
     required this.id,
     required this.email,
     required this.fullName,
   });
-/// Returns a new [AdminModel] with any supplied fields overridden.(MA-NKUNA)
-  /// Unmodified fields fall back to the current instance's values.(MA-NKUNA)
+
+  /// Returns a new [AdminModel] with any supplied fields overridden
+  /// Unmodified fields fall back to the current instance's values
   AdminModel copyWith({
     String? id,
     String? email,
