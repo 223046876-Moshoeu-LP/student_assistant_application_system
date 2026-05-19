@@ -122,7 +122,7 @@ class ApplicationViewModel extends ChangeNotifier {
     
     if (profileCheck == null) {
     
-      // Create profile if it doesn't exist
+   
       await _supabase.from('profiles').insert({
         'id': application.userId,
         'email': application.email,
@@ -133,8 +133,7 @@ class ApplicationViewModel extends ChangeNotifier {
       });
    
     }
-    
-    // Insert the application
+
     final response = await _supabase
         .from('applications')
         .insert(jsonData)
