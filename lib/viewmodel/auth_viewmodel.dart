@@ -1,4 +1,8 @@
-// lib/viewmodels/auth_viewmodel.dart
+/* 
+Student Numbers: 223046876, 223000460, 223050336, 223040081, 224000274, 224027806
+Student Names: Lehlogonolo Moshoeu, Asanda Sithole, Sandile Pheko, Mvelo Masinga, Mponisi Nkuna, Cedric Motone
+Questions: SupabaseConfig class centralizes all Supabase-related configuration, including project URL, anon key, bucket names, and admin secret code.
+*/ 
 
 import 'package:flutter/foundation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
