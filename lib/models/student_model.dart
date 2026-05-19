@@ -26,9 +26,9 @@ class StudentModel {
     required this.yearOfStudy,
     required this.department,
     this.profilePictureUrl,
-    required this.role,
     required this.createdAt,
     required this.updatedAt,
+    required this.role,
   });
 
   factory StudentModel.fromJson(Map<String, dynamic> json) {
@@ -69,9 +69,9 @@ class StudentModel {
     int? yearOfStudy,
     String? department,
     String? profilePictureUrl,
-    String? role,
     DateTime? createdAt,
     DateTime? updatedAt,
+    String? role,
   }) {
     return StudentModel(
       id: id ?? this.id,
