@@ -7,11 +7,11 @@ class ApplicationModel {
   final String fullName;
   final String email;
   final int yearOfStudy;
-  
-  // New fields for year level and semester
+
+  //fields for year level and semester
   final String? yearLevel;
   final String? semester;
-  
+
   // Module fields
   final String firstModuleLevel;
   final String firstModuleName;
@@ -20,13 +20,13 @@ class ApplicationModel {
   final String? secondModuleLevel;
   final String? secondModuleName;
   final String? secondModuleReason;
-  
+
   // Document URLs
   final String? cvUrl;
   final String? academicRecordUrl;
   final String? matricCertificateUrl;
   final String? idDocumentUrl;
-  
+
   // Status fields
   final bool eligibilityConfirmed;
   final String status;
@@ -86,7 +86,9 @@ class ApplicationModel {
       status: json['status'] ?? 'pending',
       rejectionReason: json['rejection_reason'],
       createdAt: DateTime.parse(json['created_at']),
-      updatedAt: json['updated_at'] != null ? DateTime.parse(json['updated_at']) : null,
+      updatedAt: json['updated_at'] != null
+          ? DateTime.parse(json['updated_at'])
+          : null,
     );
   }
 
@@ -105,10 +107,12 @@ class ApplicationModel {
       'has_second_module': hasSecondModule,
       if (secondModuleLevel != null) 'second_module_level': secondModuleLevel,
       if (secondModuleName != null) 'second_module_name': secondModuleName,
-      if (secondModuleReason != null) 'second_module_reason': secondModuleReason,
+      if (secondModuleReason != null)
+        'second_module_reason': secondModuleReason,
       if (cvUrl != null) 'cv_url': cvUrl,
       if (academicRecordUrl != null) 'academic_record_url': academicRecordUrl,
-      if (matricCertificateUrl != null) 'matric_certificate_url': matricCertificateUrl,
+      if (matricCertificateUrl != null)
+        'matric_certificate_url': matricCertificateUrl,
       if (idDocumentUrl != null) 'id_document_url': idDocumentUrl,
       'eligibility_confirmed': eligibilityConfirmed,
       'status': status,
