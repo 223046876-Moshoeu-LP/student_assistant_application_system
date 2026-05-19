@@ -1,7 +1,7 @@
 /* 
 Student Numbers: 223046876, 223000460, 223050336, 223040081, 224000274, 224027806
 Student Names: Lehlogonolo Moshoeu, Asanda Sithole, Sandile Pheko, Mvelo Masinga, Mponisi Nkuna, Cedric Motone
-Questions: Main entry point of the application. Initializes Supabase, sets up MultiProvider with all ViewModels, and configures the MaterialApp with routing.
+Questions: Main entry point of the application 
 */
 class AdminModel {
   final String id; // Supabase auth user UUID
@@ -15,7 +15,7 @@ class AdminModel {
   });
 
   /// Returns a new [AdminModel] with any supplied fields overridden
-  /// Unmodified fields fall back to the current instance values
+  // Unmodified fields fall back to the current instance values
   AdminModel copyWith({
     String? id,
     String? email,
