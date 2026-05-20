@@ -1,7 +1,8 @@
 # Student Assistant Application System
 
 A Flutter application for managing Student Assistant applications.
-
+## Group Name
+BrightWeb Crafters
 ## Group Members
 - Lehlogonolo Moshoeu (223046876)
 - Asanda Sithole (223000460)
