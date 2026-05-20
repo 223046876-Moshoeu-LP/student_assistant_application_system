@@ -1,4 +1,9 @@
-
+/* 
+Student Numbers: 223046876, 223000460, 223050336, 223040081, 224000274, 224027806
+Student Names: Lehlogonolo Moshoeu, Asanda Sithole, Sandile Pheko, Mvelo Masinga, Mponisi Nkuna, Cedric Motone
+Questions: The student views allows authenticated students to submit, view, edit, delete, and track the status of their SI application.
+Description: ProfileScreen allows students to view and edit their personal information including full name, phone number, year of study, department, and profile picture.
+*/
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
